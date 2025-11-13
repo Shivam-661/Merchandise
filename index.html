@@ -3,22 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Merchify | Responsive Navbar Sidebar</title>
+  <title>Merchify | Responsive Navbar</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50">
 
-  <header class="bg-white shadow-sm fixed w-full top-0 left-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+  <!-- Header -->
+  <header class="bg-white shadow-sm fixed w-full top-0 left-0 z-50 ">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center gap-4">
       <h1 class="text-2xl font-bold text-indigo-600">Merchify</h1>
 
-      <nav class="hidden md:flex space-x-6">
-        <a href="#" class="text-gray-600 hover:text-indigo-600">Home</a>
-        <a href="#tshirts" class="text-gray-600 hover:text-indigo-600">T-Shirts</a>
-        <a href="#keychains" class="text-gray-600 hover:text-indigo-600">Keychains</a>
-        <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
+      <!-- Desktop Navbar (Scrollable) -->
+      <nav class="hidden md:flex overflow-x-auto space-x-6 gap-4">
+        <a href="#" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Home</a>
+        <a href="#tshirts" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">T-Shirts</a>
+        <a href="#keychains" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Keychains</a>
+        <a href="#mousepad" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Mouse Pad</a>
+        <a href="#cups" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Cups</a>
+        <a href="#hoodies" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Hoodies</a>
+        <a href="#totebags" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Tote Bags</a>
+        <a href="#stickers" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Stickers</a>
+        <a href="#wallart" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Wall Art</a>
+        <a href="#cushioncovers" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Cushion Covers</a>
+        <a href="#napkins" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Napkins</a>
+        <a href="#smartphonecovers" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Smartphone Covers</a>
+        <a href="#facemask" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Face Mask</a>
+        <a href="#waterbottles" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Water Bottles</a>
+        <a href="#socks" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Socks</a>
+        <a href="#puzzles" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Puzzles</a>
+        <a href="#flags" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Flags</a>
+        <a href="#giftwrappers" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Gift Wrappers</a>
+        <a href="#contact" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Contact</a>
       </nav>
 
+      <!-- Hamburger Icon -->
       <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -28,33 +46,78 @@
     </div>
   </header>
 
-  <div id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-40">
+  <!-- Sidebar (for mobile) -->
+  <aside id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-40">
     <div class="px-6 py-4 flex justify-between items-center border-b">
       <h2 class="text-xl font-bold text-indigo-600">Merchify</h2>
-      <button id="close-btn" class="text-gray-600 hover:text-indigo-600 focus:outline-none">
+      <button id="close-btn" class="text-gray-600 hover:text-indigo-600">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
     </div>
-    <nav class="mt-6 space-y-4 px-6">
+    <nav class="mt-6 space-y-4 px-6 overflow-y-auto h-[calc(100%-80px)]">
       <a href="#" class="block text-gray-700 font-medium hover:text-indigo-600">Home</a>
       <a href="#tshirts" class="block text-gray-700 font-medium hover:text-indigo-600">T-Shirts</a>
       <a href="#keychains" class="block text-gray-700 font-medium hover:text-indigo-600">Keychains</a>
+      <a href="#mousepad" class="block text-gray-700 font-medium hover:text-indigo-600">Mouse Pad</a>
+      <a href="#cups" class="block text-gray-700 font-medium hover:text-indigo-600">Cups</a>
+      <a href="#hoodies" class="block text-gray-700 font-medium hover:text-indigo-600">Hoodies</a>
+      <a href="#totebags" class="block text-gray-700 font-medium hover:text-indigo-600">Tote Bags</a>
+      <a href="#stickers" class="block text-gray-700 font-medium hover:text-indigo-600">Stickers</a>
+      <a href="#wallart" class="block text-gray-700 font-medium hover:text-indigo-600">Wall Art</a>
+      <a href="#cushioncovers" class="block text-gray-700 font-medium hover:text-indigo-600">Cushion Covers</a>
+      <a href="#napkins" class="block text-gray-700 font-medium hover:text-indigo-600">Napkins</a>
+      <a href="#smartphonecovers" class="block text-gray-700 font-medium hover:text-indigo-600">Smartphone Covers</a>
+      <a href="#facemask" class="block text-gray-700 font-medium hover:text-indigo-600">Face Mask</a>
+      <a href="#waterbottles" class="block text-gray-700 font-medium hover:text-indigo-600">Water Bottles</a>
+      <a href="#socks" class="block text-gray-700 font-medium hover:text-indigo-600">Socks</a>
+      <a href="#puzzles" class="block text-gray-700 font-medium hover:text-indigo-600">Puzzles</a>
+      <a href="#flags" class="block text-gray-700 font-medium hover:text-indigo-600">Flags</a>
+      <a href="#giftwrappers" class="block text-gray-700 font-medium hover:text-indigo-600">Gift Wrappers</a>
       <a href="#contact" class="block text-gray-700 font-medium hover:text-indigo-600">Contact</a>
     </nav>
-  </div>
+  </aside>
 
+  <!-- Overlay -->
   <div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 hidden z-30"></div>
 
-  <!-- <main class="pt-20 p-6 max-w-4xl mx-auto"> -->
-    <!-- <h2 class="text-3xl font-bold mb-4">Welcome to Merchify</h2>
-    <p class="text-gray-600 mb-8">Scroll to see how the header stays fixed and sidebar works on mobile.</p>
-    <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in lacus a odio porta varius. Suspendisse nec semper urna...</p> -->
-  <!-- </main> -->
+  <!-- Dummy Content -->
+  <!-- <main class="pt-20 max-w-5xl mx-auto p-6">
+    <h2 class="text-3xl font-bold mb-4">Welcome to Merchify</h2>
+    <p class="text-gray-600">Scroll horizontally on desktop if the menu overflows, or use the sidebar on mobile.</p>
+  </main> -->
 
+  <!-- JavaScript -->
   <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('close-btn');
+    const overlay = document.getElementById('overlay');
+
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.remove('-translate-x-full');
+      overlay.classList.remove('hidden');
+    });
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    });
+    overlay.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    });
+  </script>
+
+  <!-- Hide scrollbar utility -->
+  <style>
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+
+
+  <!-- <script>
     const menuBtn = document.getElementById('menu-btn');
     const sidebar = document.getElementById('sidebar');
     const closeBtn = document.getElementById('close-btn');
@@ -74,15 +137,17 @@
       sidebar.classList.add('-translate-x-full');
       overlay.classList.add('hidden');
     });
-  </script>
+  </script> -->
 
 
 
   <section class="bg-indigo-600 text-white py-20 text-center">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-4xl font-extrabold mb-4">Shop Unique T-Shirts & Keychains</h2>
-      <p class="text-lg mb-6">Explore our exclusive collection of creative designs. Pick your favorite and we’ll deliver it right to your door!</p>
-      <a href="#tshirts" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Shop Now</a>
+      <p class="text-lg mb-6">Explore our exclusive collection of creative designs. Pick your favorite and we’ll deliver
+        it right to your door!</p>
+      <a href="#tshirts"
+        class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Shop Now</a>
     </div>
   </section>
 
@@ -90,31 +155,38 @@
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-3xl font-bold text-center mb-10">T-Shirt Collection</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        
+
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://printingstudio.in/cdn/shop/files/Tshirtmockup2.jpg?v=1710325176&width=1946" alt="T-Shirt 1" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://printingstudio.in/cdn/shop/files/Tshirtmockup2.jpg?v=1710325176&width=1946" alt="T-Shirt 1"
+            class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Dark Theme</h4>
             <p class="text-gray-600 mb-4">$25.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://thebanyantee.com/cdn/shop/files/Baby-Pink-T-shirt_671ae38f-4739-4dd7-8406-8453addce074.jpg?v=1751216048&width=1445" alt="T-Shirt 2" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://thebanyantee.com/cdn/shop/files/Baby-Pink-T-shirt_671ae38f-4739-4dd7-8406-8453addce074.jpg?v=1751216048&width=1445"
+            alt="T-Shirt 2" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Custom Font Designs</h4>
             <p class="text-gray-600 mb-4">$28.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://wrogn.com/cdn/shop/files/Picasso-Gone-Wrogn-Back-Printed-T-Shirt.webp?v=1744697737" alt="T-Shirt 3" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://wrogn.com/cdn/shop/files/Picasso-Gone-Wrogn-Back-Printed-T-Shirt.webp?v=1744697737"
+            alt="T-Shirt 3" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Back Printing</h4>
             <p class="text-gray-600 mb-4">$26.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
@@ -128,29 +200,37 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://i0.wp.com/www.nadhukan.co.in/wp-content/uploads/2021/08/02af64_65827c1d33b141deadce875bd10c5afb_mv2_500x500_png-100599-380x380-1.png?fit=380%2C380&ssl=1" alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://i0.wp.com/www.nadhukan.co.in/wp-content/uploads/2021/08/02af64_65827c1d33b141deadce875bd10c5afb_mv2_500x500_png-100599-380x380-1.png?fit=380%2C380&ssl=1"
+            alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Image Keychain</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://deq64r0ss2hgl.cloudfront.net/images/product/customized-personalized-mdf-keychains-14724518664793.jpg" alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://deq64r0ss2hgl.cloudfront.net/images/product/customized-personalized-mdf-keychains-14724518664793.jpg"
+            alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Metal Logo Keychain</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://sudharts.in/cdn/shop/files/WhatsAppImage2024-04-12at22.00.18.jpg?v=1712940351" alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://sudharts.in/cdn/shop/files/WhatsAppImage2024-04-12at22.00.18.jpg?v=1712940351"
+            alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Custom Shape Keychain</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
@@ -158,35 +238,42 @@
     </div>
   </section>
 
-  <section id="keychains" class="py-16 bg-gray-100">
+  <section id="mousepad" class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-3xl font-bold text-center mb-10">Mouse Pad Collection</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://tiimg.tistatic.com/fp/1/006/474/printed-sublimation-mouse-pad-319.jpg" alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://tiimg.tistatic.com/fp/1/006/474/printed-sublimation-mouse-pad-319.jpg" alt="Keychain 1"
+            class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Animated Mouse Pad</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://cms.cloudinary.vpsvc.com/image/upload/if_ar_gt_1.1/c_scale,t_pdpHeroGallery_Gallery/if_else/c_scale,w_816/if_end/f_auto,q_auto:best,dpr_auto/india%20lob/mouse-pads/in_mouse_pads_001" alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://cms.cloudinary.vpsvc.com/image/upload/if_ar_gt_1.1/c_scale,t_pdpHeroGallery_Gallery/if_else/c_scale,w_816/if_end/f_auto,q_auto:best,dpr_auto/india%20lob/mouse-pads/in_mouse_pads_001"
+            alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Logo Mouse Pad</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://m.media-amazon.com/images/I/416kuZFPJFL._SR290,290_.jpg" alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://m.media-amazon.com/images/I/416kuZFPJFL._SR290,290_.jpg" alt="Keychain 3"
+            class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Diamond Theme Mouse Pad</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
@@ -194,35 +281,41 @@
     </div>
   </section>
 
-  <section id="keychains" class="py-16 bg-gray-100">
+  <section id="cups" class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-3xl font-bold text-center mb-10">Cups Collection</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://printposters.in/public/uploads/largest-canvas/1735819007.webp" alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://printposters.in/public/uploads/largest-canvas/1735819007.webp" alt="Keychain 1"
+            class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://www.arcprint.in/assets/media/products_common_imgs/photo-cup/description.jpg" alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://www.arcprint.in/assets/media/products_common_imgs/photo-cup/description.jpg"
+            alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://5.imimg.com/data5/CK/RJ/MY-2191345/personalized-mug-500x500.jpg" alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://5.imimg.com/data5/CK/RJ/MY-2191345/personalized-mug-500x500.jpg" alt="Keychain 3"
+            class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
@@ -232,35 +325,43 @@
 
 
 
-  <section id="keychains" class="py-16 bg-gray-100">
+  <section id="hoodies" class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-3xl font-bold text-center mb-10">Hoodies Collection</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://m.media-amazon.com/images/I/51tRjesrZrL.jpg" alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://m.media-amazon.com/images/I/51tRjesrZrL.jpg" alt="Keychain 1"
+            class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQcHvnn_wQnsKuiiSPZcV1XO331tteQhx4RfOK35JzGqzXx8mSZthWQ6HqhHQ8QMfbRY3M55vWlBg9KzwbJZtqq-AXsRjTctu0puLVvDNDNhqzZDLn1CsRk8A" alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQcHvnn_wQnsKuiiSPZcV1XO331tteQhx4RfOK35JzGqzXx8mSZthWQ6HqhHQ8QMfbRY3M55vWlBg9KzwbJZtqq-AXsRjTctu0puLVvDNDNhqzZDLn1CsRk8A"
+            alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTT3Em3p7aHtlv-xeYNBoCZj4mJW2SEPV9Idz3L0HNTHcM5g3WCjDYWlaynYg9-_rm__Ph6A8lGU5btOgSyWWpoW4XRuCcSqWX2-RZ-ui-iY9WyFEPjeHNE6A" alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTT3Em3p7aHtlv-xeYNBoCZj4mJW2SEPV9Idz3L0HNTHcM5g3WCjDYWlaynYg9-_rm__Ph6A8lGU5btOgSyWWpoW4XRuCcSqWX2-RZ-ui-iY9WyFEPjeHNE6A"
+            alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
@@ -269,35 +370,41 @@
   </section>
 
 
-  <section id="keychains" class="py-16 bg-gray-100">
+  <section id="totebags" class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-3xl font-bold text-center mb-10">Tote Bags Collection</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://m.media-amazon.com/images/I/71fe4hotpYL._AC_UY1100_.jpg" alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://m.media-amazon.com/images/I/71fe4hotpYL._AC_UY1100_.jpg" alt="Keychain 1"
+            class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://cometpackaging.co.uk/wp-content/uploads/2021/06/screen-printed-tote-shoppers.jpeg" alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://cometpackaging.co.uk/wp-content/uploads/2021/06/screen-printed-tote-shoppers.jpeg"
+            alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://totebagfactory.com/cdn/shop/products/add-logo-tote-bag.jpg?v=1557773593&width=1214" alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://totebagfactory.com/cdn/shop/products/add-logo-tote-bag.jpg?v=1557773593&width=1214"
+            alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
@@ -306,35 +413,43 @@
   </section>
 
 
-  <section id="keychains" class="py-16 bg-gray-100">
+  <section id="stickers" class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-3xl font-bold text-center mb-10">Stickers Collection</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://raketcontent.com/Printable_Cute_Stickers_655309882d.png" alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://raketcontent.com/Printable_Cute_Stickers_655309882d.png" alt="Keychain 1"
+            class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://thegraphicsfairy.com/wp-content/uploads/2024/07/Flower-Stickers-by-Dreams-Factory-for-The-Graphics-Fairy-724x1024.jpg" alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://thegraphicsfairy.com/wp-content/uploads/2024/07/Flower-Stickers-by-Dreams-Factory-for-The-Graphics-Fairy-724x1024.jpg"
+            alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://png.pngtree.com/png-clipart/20210128/ourmid/pngtree-korean-fresh-and-cute-flower-stickers-png-image_2814056.jpg" alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://png.pngtree.com/png-clipart/20210128/ourmid/pngtree-korean-fresh-and-cute-flower-stickers-png-image_2814056.jpg"
+            alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
@@ -343,35 +458,42 @@
   </section>
 
 
-  <section id="keychains" class="py-16 bg-gray-100">
+  <section id="wallart" class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-3xl font-bold text-center mb-10">Wall Art Collection</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://img.freepik.com/free-vector/hand-drawn-flat-design-boho-wall-art_23-2149293786.jpg?semt=ais_incoming&w=740&q=80" alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://img.freepik.com/free-vector/hand-drawn-flat-design-boho-wall-art_23-2149293786.jpg?semt=ais_incoming&w=740&q=80"
+            alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://i.etsystatic.com/18319428/r/il/5aff7f/2146850394/il_570xN.2146850394_3mhx.jpg" alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://i.etsystatic.com/18319428/r/il/5aff7f/2146850394/il_570xN.2146850394_3mhx.jpg"
+            alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://kotart.in/cdn/shop/files/PaintingBBR163_1.jpg?v=1697558954" alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://kotart.in/cdn/shop/files/PaintingBBR163_1.jpg?v=1697558954" alt="Keychain 3"
+            class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
@@ -380,35 +502,41 @@
   </section>
 
 
-  <section id="keychains" class="py-16 bg-gray-100">
+  <section id="cushioncovers" class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-3xl font-bold text-center mb-10">Cushion Covers Collection</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://folkways.in/wp-content/uploads/2021/08/CUS_DP_FW_3150-scaled.jpg" alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://folkways.in/wp-content/uploads/2021/08/CUS_DP_FW_3150-scaled.jpg" alt="Keychain 1"
+            class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg_VhJXdSkpsccqRZAVsWVgBox7WJux_1BhA&s" alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg_VhJXdSkpsccqRZAVsWVgBox7WJux_1BhA&s"
+            alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://swayamindia.com/cdn/shop/files/2364_54388a9b-c189-4c3d-b553-e216703eca9a.jpg?v=1754652784" alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://swayamindia.com/cdn/shop/files/2364_54388a9b-c189-4c3d-b553-e216703eca9a.jpg?v=1754652784"
+            alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
@@ -416,35 +544,42 @@
     </div>
   </section>
 
-  <section id="keychains" class="py-16 bg-gray-100">
+  <section id="napkins" class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-3xl font-bold text-center mb-10">Napkins Collection</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOUwjRl52W6K02HHa2A01_eOabC8Fk0whHzA&s" alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOUwjRl52W6K02HHa2A01_eOabC8Fk0whHzA&s"
+            alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://www.zevyjoy.com/wp-content/uploads/2018/09/Fall-Napkin-Cards-Free-Printable.jpg" alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://www.zevyjoy.com/wp-content/uploads/2018/09/Fall-Napkin-Cards-Free-Printable.jpg"
+            alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://www.jiomart.com/images/product/original/rveltydwwi/the-little-basket-printed-art-and-craft-ceremony-gold-cocktail-tissue-paper-napkins-25-x-25-cm-product-images-orveltydwwi-p590909922-0-202111261349.jpg?im=Resize=(420,420)" alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://www.jiomart.com/images/product/original/rveltydwwi/the-little-basket-printed-art-and-craft-ceremony-gold-cocktail-tissue-paper-napkins-25-x-25-cm-product-images-orveltydwwi-p590909922-0-202111261349.jpg?im=Resize=(420,420)"
+            alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
@@ -453,35 +588,43 @@
   </section>
 
 
-  <section id="keychains" class="py-16 bg-gray-100">
+  <section id="smartphonecovers" class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-3xl font-bold text-center mb-10">Smartphone Covers Collection</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://static.vecteezy.com/system/resources/previews/000/100/212/original/free-phone-case-2-vectors.jpg?odnHeight=640&odnWidth=640&odnBg=FFFFFF" alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/000/100/212/original/free-phone-case-2-vectors.jpg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+            alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://images.vexels.com/media/users/3/355132/raw/7788b78a21860881bfcb93a031888f5d-sinaloa-travel-phone-case-design.jpg" alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://images.vexels.com/media/users/3/355132/raw/7788b78a21860881bfcb93a031888f5d-sinaloa-travel-phone-case-design.jpg"
+            alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://m.media-amazon.com/images/I/61bSuivsqEL._AC_UF1000,1000_QL80_.jpg" alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://m.media-amazon.com/images/I/61bSuivsqEL._AC_UF1000,1000_QL80_.jpg" alt="Keychain 3"
+            class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
@@ -490,35 +633,41 @@
   </section>
 
 
-  <section id="keychains" class="py-16 bg-gray-100">
+  <section id="facemask" class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-3xl font-bold text-center mb-10">Face Masks Collection</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://mightyadventures.com/wp-content/uploads/2019/10/blog-roar-tri-mask-650x450.jpg" alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://mightyadventures.com/wp-content/uploads/2019/10/blog-roar-tri-mask-650x450.jpg"
+            alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://i.etsystatic.com/13425597/r/il/080a33/4949136333/il_570xN.4949136333_fups.jpg" alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://i.etsystatic.com/13425597/r/il/080a33/4949136333/il_570xN.4949136333_fups.jpg"
+            alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://www.firstpalette.com/images/craft-mainpic-large/animalmasks-main4.jpg" alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://www.firstpalette.com/images/craft-mainpic-large/animalmasks-main4.jpg" alt="Keychain 3"
+            class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
@@ -526,35 +675,42 @@
     </div>
   </section>
 
-  <section id="keychains" class="py-16 bg-gray-100">
+  <section id="waterbottles" class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-3xl font-bold text-center mb-10">Water Bottles Collection</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://happeninghippo.com/cdn/shop/files/BottleCommon_807938e2-68fe-400d-bcc6-0c266beb83fe.jpg?v=1688635683&width=1100" alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://happeninghippo.com/cdn/shop/files/BottleCommon_807938e2-68fe-400d-bcc6-0c266beb83fe.jpg?v=1688635683&width=1100"
+            alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://images.meesho.com/images/products/458829196/umxpy_512.webp?width=512" alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://images.meesho.com/images/products/458829196/umxpy_512.webp?width=512" alt="Keychain 2"
+            class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://www.etrending.in/cdn/shop/files/519D4xRB1QL._SX679.jpg?v=1750842233&width=1445" alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://www.etrending.in/cdn/shop/files/519D4xRB1QL._SX679.jpg?v=1750842233&width=1445"
+            alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
@@ -562,35 +718,43 @@
     </div>
   </section>
 
-  <section id="keychains" class="py-16 bg-gray-100">
+  <section id="socks" class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-3xl font-bold text-center mb-10">Socks Collection</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://m.media-amazon.com/images/I/81x1Y7C-shL._AC_UY1100_.jpg" alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://m.media-amazon.com/images/I/81x1Y7C-shL._AC_UY1100_.jpg" alt="Keychain 1"
+            class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/000000410539293001/q-MFhsO5qg1-000000410539293001_1.jpg" alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/000000410539293001/q-MFhsO5qg1-000000410539293001_1.jpg"
+            alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://thetrendyside.com/cdn/shop/files/22547110_2ec59257-2e2e-44be-9c7d-caadc537da82.jpg?v=1730400782" alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://thetrendyside.com/cdn/shop/files/22547110_2ec59257-2e2e-44be-9c7d-caadc537da82.jpg?v=1730400782"
+            alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
@@ -599,35 +763,43 @@
   </section>
 
 
-  <section id="keychains" class="py-16 bg-gray-100">
+  <section id="puzzles" class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center mb-10">Socks Collection</h3>
+      <h3 class="text-3xl font-bold text-center mb-10">Puzzles Collection</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://cdn.education.com/worksheet-image/292147/printable-jigsaw-puzzle-travel-games-2023-01-25.gif" alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://cdn.education.com/worksheet-image/292147/printable-jigsaw-puzzle-travel-games-2023-01-25.gif"
+            alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://worksheets.clipart-library.com/images2/free-printable-jigsaw-puzzles-template/free-printable-jigsaw-puzzles-template-17.gif" alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://worksheets.clipart-library.com/images2/free-printable-jigsaw-puzzles-template/free-printable-jigsaw-puzzles-template-17.gif"
+            alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://www.pictorem.com/images/photopuzzle1.jpg" alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://www.pictorem.com/images/photopuzzle1.jpg" alt="Keychain 3"
+            class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
@@ -636,35 +808,41 @@
   </section>
 
 
-  <section id="keychains" class="py-16 bg-gray-100">
+  <section id="flags" class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-3xl font-bold text-center mb-10">Flags Collection</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://bestflag.com/cdn/shop/files/2025_Collection_Hero_-_Flags_-_V3.png?v=1760627462&width=1350" alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://bestflag.com/cdn/shop/files/2025_Collection_Hero_-_Flags_-_V3.png?v=1760627462&width=1350"
+            alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://www.united-states-flag.com/cdn/shop/files/wh53v5elfharnsaa8xvd.jpg?v=1741782935" alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://www.united-states-flag.com/cdn/shop/files/wh53v5elfharnsaa8xvd.jpg?v=1741782935"
+            alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://www.bandshoppe.com/img/511852-print-on-demand-color-guard-flag.jpg" alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://www.bandshoppe.com/img/511852-print-on-demand-color-guard-flag.jpg" alt="Keychain 3"
+            class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
@@ -673,35 +851,43 @@
   </section>
 
 
-  <section id="keychains" class="py-16 bg-gray-100">
+  <section id="giftwrappers" class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-3xl font-bold text-center mb-10">Gift Wrapping Collection</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://res.cloudinary.com/dxivtqnri/image/upload/c_fill,f_auto,g_auto,h_480,w_720/v1696424965/2023/Gift-wrapping-paper/2.jpg" alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://res.cloudinary.com/dxivtqnri/image/upload/c_fill,f_auto,g_auto,h_480,w_720/v1696424965/2023/Gift-wrapping-paper/2.jpg"
+            alt="Keychain 1" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://cms.cloudinary.vpsvc.com/image/upload/if_ar_gt_1.1/c_scale,t_pdpHeroGallery_Gallery/if_else/c_scale,w_816/if_end/f_auto,q_auto:best,dpr_auto/India%20LOB/Custom%20Wrapping%20Paper/Custom_Wrapping_Paper_03" alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
+          <img
+            src="https://cms.cloudinary.vpsvc.com/image/upload/if_ar_gt_1.1/c_scale,t_pdpHeroGallery_Gallery/if_else/c_scale,w_816/if_end/f_auto,q_auto:best,dpr_auto/India%20LOB/Custom%20Wrapping%20Paper/Custom_Wrapping_Paper_03"
+            alt="Keychain 2" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-          <img src="https://i.etsystatic.com/43404458/r/il/b47a32/4970508312/il_570xN.4970508312_fij6.jpg" alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
+          <img src="https://i.etsystatic.com/43404458/r/il/b47a32/4970508312/il_570xN.4970508312_fij6.jpg"
+            alt="Keychain 3" class="mx-auto w-auto h-64 object-cover">
           <div class="p-6 text-center">
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
-            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
+              Now</button>
           </div>
         </div>
 
@@ -717,4 +903,5 @@
   </footer>
 
 </body>
+
 </html>
