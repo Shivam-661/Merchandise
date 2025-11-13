@@ -129,10 +129,11 @@
             <h4 class="text-xl font-semibold mb-2">Dark Theme</h4>
             <p class="text-gray-600 mb-4">$25.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -145,10 +146,11 @@
             <h4 class="text-xl font-semibold mb-2">Custom Font Designs</h4>
             <p class="text-gray-600 mb-4">$28.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -160,10 +162,11 @@
             <h4 class="text-xl font-semibold mb-2">Back Printing</h4>
             <p class="text-gray-600 mb-4">$26.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -187,10 +190,11 @@
             <p class="text-gray-600 mb-4">$10.00</p>
 
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -202,73 +206,7 @@
 
 
 
-        <div id="modalOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
 
-        <div id="bulkModal"
-          class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-xl p-6 w-11/12 max-w-md hidden z-50">
-
-          <div class="flex justify-between items-center mb-4 border-b pb-2">
-            <h3 class="text-xl font-semibold text-indigo-600">Bulk Order for Product</h3>
-            <button id="closeModal" class="text-gray-500 hover:text-indigo-600">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-
-          <form class="space-y-4">
-            <div>
-              <label class="block text-gray-700 text-sm font-medium mb-1">Name</label>
-              <input type="text" placeholder="Your Name"
-                class="w-full border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 p-2">
-            </div>
-
-            <div>
-              <label class="block text-gray-700 text-sm font-medium mb-1">Email</label>
-              <input type="email" placeholder="Your Email"
-                class="w-full border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 p-2">
-            </div>
-
-            <div>
-              <label class="block text-gray-700 text-sm font-medium mb-1">Quantity</label>
-              <input type="number" min="10" value="10"
-                class="w-full border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 p-2">
-            </div>
-
-            <div>
-              <label class="block text-gray-700 text-sm font-medium mb-1">Message / Customization Notes</label>
-              <textarea placeholder="Mention size, logo, or color preferences..." rows="3"
-                class="w-full border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 p-2"></textarea>
-            </div>
-
-            <button type="submit"
-              class="w-full bg-indigo-600 text-white font-semibold py-2 rounded-md hover:bg-indigo-700 transition">Submit
-              Bulk Order</button>
-          </form>
-        </div>
-
-        <script>
-          const bulkBtn = document.getElementById('bulkBtn');
-          const modal = document.getElementById('bulkModal');
-          const overlay2 = document.getElementById('modalOverlay');
-          const closeModal = document.getElementById('closeModal');
-
-          bulkBtn.addEventListener('click', () => {
-            modal.classList.remove('hidden');
-            overlay2.classList.remove('hidden');
-          });
-
-          closeModal.addEventListener('click', () => {
-            modal.classList.add('hidden');
-            overlay2.classList.add('hidden');
-          });
-
-          overlay2.addEventListener('click', () => {
-            modal.classList.add('hidden');
-            overlay2.classList.add('hidden');
-          });
-        </script>
 
 
 
@@ -282,10 +220,11 @@
             <h4 class="text-xl font-semibold mb-2">Metal Logo Keychain</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -297,10 +236,11 @@
             <h4 class="text-xl font-semibold mb-2">Custom Shape Keychain</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -321,10 +261,11 @@
             <h4 class="text-xl font-semibold mb-2">Animated Mouse Pad</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -337,10 +278,11 @@
             <h4 class="text-xl font-semibold mb-2">Logo Mouse Pad</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -352,10 +294,11 @@
             <h4 class="text-xl font-semibold mb-2">Diamond Theme Mouse Pad</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -376,10 +319,11 @@
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -391,10 +335,11 @@
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -406,10 +351,11 @@
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -432,10 +378,11 @@
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -448,10 +395,11 @@
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -464,10 +412,11 @@
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -489,10 +438,11 @@
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -504,10 +454,11 @@
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -519,10 +470,11 @@
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -544,10 +496,11 @@
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -560,10 +513,11 @@
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -576,10 +530,11 @@
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -604,10 +559,11 @@
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -619,10 +575,11 @@
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -634,10 +591,11 @@
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -667,10 +625,11 @@
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -682,10 +641,11 @@
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -697,10 +657,11 @@
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -721,10 +682,11 @@
             <h4 class="text-xl font-semibold mb-2">Plain Design Cup</h4>
             <p class="text-gray-600 mb-4">$10.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -737,10 +699,11 @@
             <h4 class="text-xl font-semibold mb-2">Image Printed Cup</h4>
             <p class="text-gray-600 mb-4">$12.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -753,10 +716,11 @@
             <h4 class="text-xl font-semibold mb-2">Greeting Cup</h4>
             <p class="text-gray-600 mb-4">$9.00</p>
             <div class="flex justify-center gap-3">
-              <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order
-                Now</button>
-              <button id="bulkBtn"
-                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk Order</button>
+              <button
+                class="detailsBtn bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Details
+              </button>
+              <button class="bulkBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">Bulk
+                Order</button>
             </div>
           </div>
         </div>
@@ -782,5 +746,175 @@
   </footer>
 
 </body>
+
+<div id="modalOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+
+<div id="bulkModal"
+  class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-xl p-6 w-11/12 max-w-md hidden z-50">
+
+  <div class="flex justify-between items-center mb-4 border-b pb-2">
+    <h3 class="text-xl font-semibold text-indigo-600">Bulk Order for Product</h3>
+    <button id="closeModal" class="text-gray-500 hover:text-indigo-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <form class="space-y-4">
+    <div>
+      <label class="block text-gray-700 text-sm font-medium mb-1">Name</label>
+      <input type="text" placeholder="Your Name"
+        class="w-full border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 p-2">
+    </div>
+
+    <div>
+      <label class="block text-gray-700 text-sm font-medium mb-1">Email</label>
+      <input type="email" placeholder="Your Email"
+        class="w-full border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 p-2">
+    </div>
+
+    <div>
+      <label class="block text-gray-700 text-sm font-medium mb-1">Quantity</label>
+      <input type="number" min="10" value="10"
+        class="w-full border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 p-2">
+    </div>
+
+    <div>
+      <label class="block text-gray-700 text-sm font-medium mb-1">Message / Customization Notes</label>
+      <textarea placeholder="Mention size, logo, or color preferences..." rows="3"
+        class="w-full border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 p-2"></textarea>
+    </div>
+
+    <button type="submit"
+      class="w-full bg-indigo-600 text-white font-semibold py-2 rounded-md hover:bg-indigo-700 transition">Submit
+      Bulk Order</button>
+  </form>
+</div>
+
+<script>
+  const bulkBtns = document.querySelectorAll('.bulkBtn');
+  const modal = document.getElementById('bulkModal');
+  const overlay2 = document.getElementById('modalOverlay');
+  const closeModal = document.getElementById('closeModal');
+
+  bulkBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+      overlay2.classList.remove('hidden');
+    });
+  });
+
+  closeModal.addEventListener('click', () => {
+    modal.classList.add('hidden');
+    overlay2.classList.add('hidden');
+  });
+
+  overlay2.addEventListener('click', () => {
+    modal.classList.add('hidden');
+    overlay2.classList.add('hidden');
+  });
+</script>
+
+
+
+
+<div id="detailsmodalOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+
+<div id="detailsModal"
+  class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-xl p-6 w-11/12 max-w-md hidden z-50">
+
+  <div class="flex justify-between items-center mb-4 border-b pb-2">
+    <h3 class="text-xl font-semibold text-indigo-600">Details of Product</h3>
+    <button id="detailscloseModal" class="text-gray-500 hover:text-indigo-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="space-y-4">
+    <!-- Product Image -->
+    <div class="flex justify-center">
+      <img
+        src="https://i0.wp.com/www.nadhukan.co.in/wp-content/uploads/2021/08/02af64_65827c1d33b141deadce875bd10c5afb_mv2_500x500_png-100599-380x380-1.png?fit=380%2C380&ssl=1"
+        alt="Image Keychain" class="w-48 h-48 object-contain">
+    </div>
+
+    <!-- Product Title -->
+    <h2 class="text-2xl font-semibold text-gray-800 text-center">Image Keychain</h2>
+
+    <!-- Product Price -->
+    <p class="text-indigo-600 text-center text-xl font-bold">$10.00</p>
+
+    <!-- Product Description -->
+    <p class="text-gray-600 text-center leading-relaxed">
+      A personalized keychain that carries your favorite photo. Perfect for gifts, branding, or everyday use.
+      Durable, lightweight, and made with premium materials for long-lasting shine.
+    </p>
+
+    <!-- Product Features -->
+    <ul class="text-gray-700 space-y-1">
+      <li class="flex items-center">
+        <svg class="w-5 h-5 text-indigo-600 mr-2" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+        High-quality print finish
+      </li>
+      <li class="flex items-center">
+        <svg class="w-5 h-5 text-indigo-600 mr-2" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+        Custom photo or logo option
+      </li>
+      <li class="flex items-center">
+        <svg class="w-5 h-5 text-indigo-600 mr-2" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+        Free shipping on bulk orders
+      </li>
+    </ul>
+
+    <!-- Action Buttons -->
+    <div class="flex flex-col sm:flex-row justify-center gap-3 pt-4">
+      <button class="bg-indigo-600 text-white px-5 py-2 rounded-md font-semibold hover:bg-indigo-700 transition">
+        Order Now
+      </button>
+      <button id="bulkBtn"
+        class="bg-gray-200 text-gray-800 px-5 py-2 rounded-md font-semibold hover:bg-gray-300 transition">
+        Bulk Order Inquiry
+      </button>
+    </div>
+  </div>
+
+</div>
+
+
+<script>
+  const detailsBtn = document.querySelectorAll('.detailsBtn');
+  const detailsmodal = document.getElementById('detailsModal');
+  const detailsoverlay2 = document.getElementById('detailsmodalOverlay');
+  const detailscloseModal = document.getElementById('detailscloseModal');
+
+  detailsBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+      detailsmodal.classList.remove('hidden');
+      detailsoverlay2.classList.remove('hidden');
+    });
+  });
+
+  detailscloseModal.addEventListener('click', () => {
+    detailsmodal.classList.add('hidden');
+    detailsoverlay2.classList.add('hidden');
+  });
+
+  detailsoverlay2.addEventListener('click', () => {
+    detailsmodal.classList.add('hidden');
+    detailsoverlay2.classList.add('hidden');
+  });
+</script>
 
 </html>
