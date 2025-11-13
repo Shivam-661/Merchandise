@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merchify | Responsive Navbar Sidebar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-sm fixed w-full top-0 left-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-600">Merchify</h1>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="#" class="text-gray-600 hover:text-indigo-600">Home</a>
+        <a href="#tshirts" class="text-gray-600 hover:text-indigo-600">T-Shirts</a>
+        <a href="#keychains" class="text-gray-600 hover:text-indigo-600">Keychains</a>
+        <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
+      </nav>
+
+      <!-- Hamburger Button -->
+      <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Sidebar (Mobile Menu) -->
+  <div id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-40">
+    <div class="px-6 py-4 flex justify-between items-center border-b">
+      <h2 class="text-xl font-bold text-indigo-600">Merchify</h2>
+      <button id="close-btn" class="text-gray-600 hover:text-indigo-600 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <nav class="mt-6 space-y-4 px-6">
+      <a href="#" class="block text-gray-700 font-medium hover:text-indigo-600">Home</a>
+      <a href="#tshirts" class="block text-gray-700 font-medium hover:text-indigo-600">T-Shirts</a>
+      <a href="#keychains" class="block text-gray-700 font-medium hover:text-indigo-600">Keychains</a>
+      <a href="#contact" class="block text-gray-700 font-medium hover:text-indigo-600">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Overlay (when sidebar is open) -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 hidden z-30"></div>
+
+  <!-- Dummy Page Content -->
+  <!-- <main class="pt-20 p-6 max-w-4xl mx-auto"> -->
+    <!-- <h2 class="text-3xl font-bold mb-4">Welcome to Merchify</h2>
+    <p class="text-gray-600 mb-8">Scroll to see how the header stays fixed and sidebar works on mobile.</p>
+    <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in lacus a odio porta varius. Suspendisse nec semper urna...</p> -->
+  <!-- </main> -->
+
+  <!-- JS for Sidebar Toggle -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('close-btn');
+    const overlay = document.getElementById('overlay');
+
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.remove('-translate-x-full');
+      overlay.classList.remove('hidden');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    });
+
+    overlay.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    });
+  </script>
+
+
+
+  <!-- Hero Section -->
+  <section class="bg-indigo-600 text-white py-20 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-4xl font-extrabold mb-4">Shop Unique T-Shirts & Keychains</h2>
+      <p class="text-lg mb-6">Explore our exclusive collection of creative designs. Pick your favorite and we’ll deliver it right to your door!</p>
+      <a href="#tshirts" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- T-Shirts Section -->
+  <section id="tshirts" class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-10">T-Shirt Collection</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        
+        <!-- T-Shirt Item -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+          <img src="data:image/jpeg;base64,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" alt="T-Shirt 1" class="mx-auto w-auto h-64 object-cover">
+          <div class="p-6 text-center">
+            <h4 class="text-xl font-semibold mb-2">Minimalist Wave Tee</h4>
+            <p class="text-gray-600 mb-4">$25.00</p>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+          </div>
+        </div>
+
+        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBYio12u9rVtzM-OeR1pNGclR8Y9BOjCXXug&s" alt="T-Shirt 2" class="mx-auto w-auto h-64 object-cover">
+          <div class="p-6 text-center">
+            <h4 class="text-xl font-semibold mb-2">Mountain Explorer Tee</h4>
+            <p class="text-gray-600 mb-4">$28.00</p>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+          </div>
+        </div>
+
+        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCXFXTdrCZ0tomZo7DEmTWjjmKdJnoWL0QeQ&s" alt="T-Shirt 3" class="mx-auto w-auto h-64 object-cover">
+          <div class="p-6 text-center">
+            <h4 class="text-xl font-semibold mb-2">Retro Vibes Tee</h4>
+            <p class="text-gray-600 mb-4">$26.00</p>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Keychains Section -->
+  <section id="keychains" class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-10">Keychain Collection</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+          <img src="https://i.etsystatic.com/23072206/r/il/a0d7b9/5583390783/il_570xN.5583390783_kpa4.jpg" alt="Keychain 1" class="w-full h-64 object-cover">
+          <div class="p-6 text-center">
+            <h4 class="text-xl font-semibold mb-2">Leather Tag Keychain</h4>
+            <p class="text-gray-600 mb-4">$10.00</p>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+          </div>
+        </div>
+
+        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+          <img src="https://m.media-amazon.com/images/I/61FnYjmV-fL._AC_UY1100_.jpg" alt="Keychain 2" class="w-full h-64 object-cover">
+          <div class="p-6 text-center">
+            <h4 class="text-xl font-semibold mb-2">Metal Logo Keychain</h4>
+            <p class="text-gray-600 mb-4">$12.00</p>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+          </div>
+        </div>
+
+        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+          <img src="https://sudharts.in/cdn/shop/files/WhatsAppImage2024-04-12at22.00.18.jpg?v=1712940351" alt="Keychain 3" class="w-full h-64 object-cover">
+          <div class="p-6 text-center">
+            <h4 class="text-xl font-semibold mb-2">Custom Shape Keychain</h4>
+            <p class="text-gray-600 mb-4">$9.00</p>
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Order Now</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-indigo-700 text-white py-8 text-center">
+    <p class="text-lg font-semibold mb-2">Contact Us</p>
+    <p>Email: support@merchify.com | Phone: +1 (555) 123-4567</p>
+    <p class="mt-4 text-sm">&copy; 2025 Merchify. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
