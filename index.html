@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Merchify | Responsive Navbar</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-50">
 
   <header class="bg-white shadow-sm fixed w-full top-0 left-0 z-50 ">
@@ -36,20 +38,19 @@
 
       <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
     </div>
   </header>
 
-  <aside id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-40">
+  <aside id="sidebar"
+    class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-40">
     <div class="px-6 py-4 flex justify-between items-center border-b">
       <h2 class="text-xl font-bold text-indigo-600">Merchify</h2>
       <button id="close-btn" class="text-gray-600 hover:text-indigo-600">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M6 18L18 6M6 6l12 12" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
     </div>
@@ -76,7 +77,7 @@
     </nav>
   </aside>
 
-  
+
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const sidebar = document.getElementById('sidebar');
@@ -98,21 +99,35 @@
   </script>
 
   <style>
-    .scrollbar-hide::-webkit-scrollbar { display: none; }
-    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
   </style>
 
 
-  
 
 
-  <section class="bg-indigo-600 text-white py-28 text-center">
+
+  <section class="bg-indigo-600 text-white py-28 text-center grid grid-cols-1 md:grid-cols-3">
+    <div class="m-auto rounded-full bg-white p-4 border-8 border-blue-200">
+      <img src="https://hr.ggits.org/public/assets/ggits.png" alt="T-Shirt 1"
+        class="m-auto w-auto h-32 md:h-64 object-cover">
+    </div>
     <div class="max-w-3xl mx-auto">
       <h2 class="text-4xl font-extrabold mb-4">Shop Unique T-Shirts & Keychains</h2>
       <p class="text-lg mb-6">Explore our exclusive collection of creative designs. Pick your favorite and we’ll deliver
         it right to your door!</p>
       <a href="#tshirts"
         class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Shop Now</a>
+    </div>
+    <div class="m-auto hidden md:block rounded-full bg-white p-4 border-8 border-blue-200">
+      <img src="https://hr.ggits.org/public/assets/ggits.png" alt="T-Shirt 1"
+        class="m-auto w-auto h-32 md:h-64 object-cover">
     </div>
   </section>
 
@@ -863,7 +878,7 @@
 
   <footer id="contact" class="bg-indigo-700 text-white py-8 text-center">
     <p class="text-lg font-semibold mb-2">Contact Us</p>
-    <p>Email: support@merchify.com | Phone: +1 (555) 123-4567</p>
+    <p>Email: support@merchify.com | Phone: +91 9876543210</p>
     <p class="mt-4 text-sm">&copy; 2025 Merchify. All rights reserved.</p>
   </footer>
 
