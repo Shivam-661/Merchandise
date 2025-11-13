@@ -8,13 +8,11 @@
 </head>
 <body class="bg-gray-50">
 
-  <!-- Header -->
   <header class="bg-white shadow-sm fixed w-full top-0 left-0 z-50 ">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center gap-4">
+    <div class="max-w-9xl mx-auto px-4 md:px-6 py-4 md:py-2 flex justify-between items-center gap-x-4">
       <h1 class="text-2xl font-bold text-indigo-600">Merchify</h1>
 
-      <!-- Desktop Navbar (Scrollable) -->
-      <nav class="hidden md:flex overflow-x-auto space-x-6 gap-4">
+      <nav class="hidden md:flex overflow-x-auto space-x-6">
         <a href="#" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Home</a>
         <a href="#tshirts" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">T-Shirts</a>
         <a href="#keychains" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Keychains</a>
@@ -36,7 +34,6 @@
         <a href="#contact" class="text-gray-600 hover:text-indigo-600 whitespace-nowrap">Contact</a>
       </nav>
 
-      <!-- Hamburger Icon -->
       <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -46,7 +43,6 @@
     </div>
   </header>
 
-  <!-- Sidebar (for mobile) -->
   <aside id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-40">
     <div class="px-6 py-4 flex justify-between items-center border-b">
       <h2 class="text-xl font-bold text-indigo-600">Merchify</h2>
@@ -80,16 +76,7 @@
     </nav>
   </aside>
 
-  <!-- Overlay -->
-  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 hidden z-30"></div>
-
-  <!-- Dummy Content -->
-  <!-- <main class="pt-20 max-w-5xl mx-auto p-6">
-    <h2 class="text-3xl font-bold mb-4">Welcome to Merchify</h2>
-    <p class="text-gray-600">Scroll horizontally on desktop if the menu overflows, or use the sidebar on mobile.</p>
-  </main> -->
-
-  <!-- JavaScript -->
+  
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const sidebar = document.getElementById('sidebar');
@@ -110,38 +97,16 @@
     });
   </script>
 
-  <!-- Hide scrollbar utility -->
   <style>
     .scrollbar-hide::-webkit-scrollbar { display: none; }
     .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
 
 
-  <!-- <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const sidebar = document.getElementById('sidebar');
-    const closeBtn = document.getElementById('close-btn');
-    const overlay = document.getElementById('overlay');
-
-    menuBtn.addEventListener('click', () => {
-      sidebar.classList.remove('-translate-x-full');
-      overlay.classList.remove('hidden');
-    });
-
-    closeBtn.addEventListener('click', () => {
-      sidebar.classList.add('-translate-x-full');
-      overlay.classList.add('hidden');
-    });
-
-    overlay.addEventListener('click', () => {
-      sidebar.classList.add('-translate-x-full');
-      overlay.classList.add('hidden');
-    });
-  </script> -->
+  
 
 
-
-  <section class="bg-indigo-600 text-white py-20 text-center">
+  <section class="bg-indigo-600 text-white py-28 text-center">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-4xl font-extrabold mb-4">Shop Unique T-Shirts & Keychains</h2>
       <p class="text-lg mb-6">Explore our exclusive collection of creative designs. Pick your favorite and we’ll deliver
