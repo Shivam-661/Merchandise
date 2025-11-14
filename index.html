@@ -10,7 +10,7 @@
 
 <body class="bg-gray-50">
 
-  <header class="bg-white shadow-sm fixed w-full top-0 left-0 z-50 ">
+  <header class="bg-white shadow-sm fixed w-full top-0 left-0 z-40 ">
     <div class="max-w-9xl mx-auto px-4 md:px-6 py-4 md:py-2 flex justify-between items-center gap-x-4">
       <h1 class="text-2xl font-bold text-indigo-600">Merchify</h1>
 
@@ -37,8 +37,10 @@
     </div>
   </header>
 
+
+
   <aside id="sidebar"
-    class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-40">
+    class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
     <div class="px-6 py-4 flex justify-between items-center border-b">
       <h2 class="text-xl font-bold text-indigo-600">Merchify</h2>
       <button id="close-btn" class="text-gray-600 hover:text-indigo-600">
@@ -46,23 +48,25 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
+
     </div>
     <nav class="mt-6 space-y-4 px-6 overflow-y-auto h-[calc(100%-80px)]">
-      <a href="#" class="block text-gray-700 font-medium hover:text-indigo-600">Home</a>
-      <a href="#tshirts" class="block text-gray-700 font-medium hover:text-indigo-600">T-Shirts</a>
-      <a href="#keychains" class="block text-gray-700 font-medium hover:text-indigo-600">Keychains</a>
-      <a href="#mousepad" class="block text-gray-700 font-medium hover:text-indigo-600">Mouse Pad</a>
-      <a href="#cups" class="block text-gray-700 font-medium hover:text-indigo-600">Cups</a>
-      <a href="#hoodies" class="block text-gray-700 font-medium hover:text-indigo-600">Hoodies</a>
-      <a href="#totebags" class="block text-gray-700 font-medium hover:text-indigo-600">Tote Bags</a>
-      <a href="#stickers" class="block text-gray-700 font-medium hover:text-indigo-600">Stickers</a>
-      <a href="#cushioncovers" class="block text-gray-700 font-medium hover:text-indigo-600">Cushion Covers</a>
-      <a href="#waterbottles" class="block text-gray-700 font-medium hover:text-indigo-600">Water Bottles</a>
-      <a href="#socks" class="block text-gray-700 font-medium hover:text-indigo-600">Socks</a>
-      <a href="#contact" class="block text-gray-700 font-medium hover:text-indigo-600">Contact</a>
+      <a href="#" onclick="hide()" class="block text-gray-700 font-medium hover:text-indigo-600">Home</a>
+      <a href="#tshirts" onclick="hide()" class="block text-gray-700 font-medium hover:text-indigo-600">T-Shirts</a>
+      <a href="#keychains" onclick="hide()" class="block text-gray-700 font-medium hover:text-indigo-600">Keychains</a>
+      <a href="#mousepad" onclick="hide()" class="block text-gray-700 font-medium hover:text-indigo-600">Mouse Pad</a>
+      <a href="#cups" onclick="hide()" class="block text-gray-700 font-medium hover:text-indigo-600">Cups</a>
+      <a href="#hoodies" onclick="hide()" class="block text-gray-700 font-medium hover:text-indigo-600">Hoodies</a>
+      <a href="#totebags" onclick="hide()" class="block text-gray-700 font-medium hover:text-indigo-600">Tote Bags</a>
+      <a href="#stickers" onclick="hide()" class="block text-gray-700 font-medium hover:text-indigo-600">Stickers</a>
+      <a href="#cushioncovers" onclick="hide()" class="block text-gray-700 font-medium hover:text-indigo-600">Cushion Covers</a>
+      <a href="#waterbottles" onclick="hide()" class="block text-gray-700 font-medium hover:text-indigo-600">Water Bottles</a>
+      <a href="#socks" onclick="hide()" class="block text-gray-700 font-medium hover:text-indigo-600">Socks</a>
+      <a href="#contact" onclick="hide()" class="block text-gray-700 font-medium hover:text-indigo-600">Contact</a>
     </nav>
   </aside>
 
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-30"></div>
 
   <script>
     const menuBtn = document.getElementById('menu-btn');
@@ -82,6 +86,12 @@
       sidebar.classList.add('-translate-x-full');
       overlay.classList.add('hidden');
     });
+
+
+    function hide(){
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    }
   </script>
 
   <style>
@@ -883,8 +893,7 @@
       <button class="bg-indigo-600 text-white px-5 py-2 rounded-md font-semibold hover:bg-indigo-700 transition">
         Order Now
       </button>
-      <button
-        class="bulkBtn bg-gray-200 text-gray-800 px-5 py-2 rounded-md font-semibold hover:bg-gray-300 transition">
+      <button class="bulkBtn bg-gray-200 text-gray-800 px-5 py-2 rounded-md font-semibold hover:bg-gray-300 transition">
         Bulk Order Inquiry
       </button>
     </div>
